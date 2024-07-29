@@ -8,11 +8,33 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        slider: "linear-gradient(to top,#000 10%, transparent)",
+        
+      },
+      colors: {
+        primary: '#D30000',
+        primary_login: '#64748b6e'
+      },
+      keyframes: {
+        showContent: {
+          '0%': {
+            transform: 'translateY(20px)',
+            filter: 'blur(10px)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            filter: 'blur(0)',
+            opacity: '1',
+          },
+        },
+      },
+      animation: {
+        'show-content': 'showContent 0.5s 0.7s ease-in-out 1 forwards',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 };

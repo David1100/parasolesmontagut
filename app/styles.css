@@ -1,0 +1,21 @@
+/* styles.css */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+    @apply text-black  w-10 h-10 rounded-full border-2 border-gray-700;
+}
+
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+    @apply text-lg font-bold text-gray-800;
+}
+
+.mySwiper .swiper-button-prev:hover::after,
+.mySwiper .swiper-button-next:hover::after {
+    @apply text-lg font-bold text-gray-500;
+}
+
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-prev:hover {
+    @apply text-white bg-[#00000036] border-gray-500;
+    
+}
